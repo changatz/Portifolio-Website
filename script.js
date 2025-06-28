@@ -1,6 +1,19 @@
 // Theme Toggle
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+  }
+});
+
+// Toggle theme on button click
 document.getElementById('theme-toggle').addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
+  // Save preference
+  if (document.body.classList.contains('dark-theme')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
 });
 
 // Form Validation

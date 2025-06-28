@@ -1,9 +1,9 @@
 :root {
   --primary: #292d46;
-  --accent: #FFC107;
-  --bg-light: #f5f5f5;
+  --accent: #292d46;
+  --bg-light: #eceff5;
   --bg-dark: #121212;
-  --text-light: #333;
+  --text-light: #121212;
   --text-dark: #f5f5f5;
 }
 
@@ -19,24 +19,43 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  margin-top: 1.5em;
+  margin-top: 1em;
+  margin-left: 10px;
+}
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  font-weight: bold;
 }
-.hero-content h2 {
-  font-size: 2.5rem;
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 70px;
+  max-width: 950px;
+  margin: auto;
+  flex: 1;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 20px;
+  }
+
+.hero-content h3 {
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 .cta-button {
-  background-color: #FFC107;
+  /* background-color:#292d46 ; */
   color: #333;
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-}
+
 .dark-theme {
   background-color: var(--bg-dark);
   color: var(--text-dark);
@@ -86,8 +105,9 @@ progress {
 .photo {
   width: 600px;
   height: 350px;
-  border: 3px solid var(--accent);
+  border: 5px solid var(--accent);
   border-radius: 10px;
+ 
 }
 
 form {
@@ -109,6 +129,16 @@ button {
   border: none;
   cursor: pointer;
 }
+.home {
+  padding: 0.8rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  align-items: center;
+  margin-left: 30%;
+}
 
 button:hover {
   background: var(--accent);
@@ -116,10 +146,10 @@ button:hover {
 
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 20px;
   background: var(--primary);
   color: white;
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 
 @media (max-width: 600px) {
@@ -134,9 +164,32 @@ footer {
   height: 180px;
 }
 .prof-photo {
-  width: 180px;
-  height: 180px;
+  width: 290px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ccc;
+   border: 2px solid darkblue;
+  padding: 2px;
+  margin-top: 25px;
+  margin-right: 10px;
+  flex: 1;
+ 
+  text-align: right;
+}
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  
+  font-size: 24px;
+  color: #292d46;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.social-icons a:hover {
+  color: #292d46; 
 }
